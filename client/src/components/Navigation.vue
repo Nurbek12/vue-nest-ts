@@ -60,6 +60,6 @@ const items = (user as any).role === 'admin' ? [
   
 const signout = () => {
   logout()
-  location.href = '/login'
+  window.location.reload()
 }
 </script>

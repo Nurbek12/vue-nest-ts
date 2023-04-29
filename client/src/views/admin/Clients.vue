@@ -25,7 +25,7 @@
           <template v-slot:item.no="{index}">{{ index + 1 }}.</template>
           <template v-slot:item.image="{item}">
             <v-avatar>
-              <v-img cover :src="item.raw.image?'http://localhost:3001/'+item.raw.image:'/img/noimg.jpg'"></v-img>
+              <v-img cover :src="item.raw.image?'https://adminpanel-vnps.onrender.com/'+item.raw.image:'/img/noimg.jpg'"></v-img>
             </v-avatar>
           </template>
           <template v-slot:item.actions="{item}">
@@ -181,7 +181,7 @@ const defaultItem = {
 const image: Ref<File[]> = ref([])
 const formTitle = computed(() => editedIndex.value === -1 ? "Добавить пользователя" : "Редактировать пользователя")
 const imagesrc = computed(() => {
-  if(editedItem.value?.image) return `http://localhost:3001/${editedItem.value.image}`
+  if(editedItem.value?.image) return `https://adminpanel-vnps.onrender.com/${editedItem.value.image}`
   else if(image.value[0]) return URL.createObjectURL(image.value[0])
   return '/img/noimg.jpg'
 })

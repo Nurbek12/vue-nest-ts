@@ -119,7 +119,7 @@ const image: Ref<File[]> = ref([])
 
 const imagesrc = computed(() => {
   if(image.value[0]) return URL.createObjectURL(image.value[0])
-  else if(details.value.image) return `http://localhost:3001/${details.value.image}`
+  else if(details.value.image) return `https://adminpanel-vnps.onrender.com/${details.value.image}`
   else return '/img/noimg.jpg'
 })
 

@@ -14,7 +14,7 @@
                       class="d-flex px-2" style="width: 100%;"
                       :class="my(message.sender.id) ? 'justify-end' : 'justify-start'">
                       <v-avatar v-if="!my(message.sender.id)" class="mt-1 mr-2" style="position: sticky; top: 0;">
-                        <v-img :src="message.sender.image?message.sender.image:'/img/noimg.jpg'" alt="" />
+                        <v-img :src="message.sender.image?'https://adminpanel-vnps.onrender.com/'+message.sender.image:'/img/noimg.jpg'" alt="" />
                       </v-avatar>
                       <v-sheet :color="!my(message.sender.id) ? 'surface' : 'info'"
                         :border="!my(message.sender.id) && 'md'"
@@ -72,7 +72,7 @@ import store from "../store"
 import axios from '../api'
 import { io } from 'socket.io-client'
 
-const socket = io('http://localhost:3001/')
+const socket = io('/')
 
 const { user } = store()
 const text = ref("");

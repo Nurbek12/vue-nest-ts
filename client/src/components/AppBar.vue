@@ -27,7 +27,7 @@ const signout = () => {
 
 const imagesrc = computed(() => {
   if((user as User).image) 
-    return `http://localhost:3001/${(user as User).image}`
+    return `https://adminpanel-vnps.onrender.com/${(user as User).image}`
   else
     return '/img/noimg.jpg'
 })

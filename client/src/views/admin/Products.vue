@@ -26,7 +26,7 @@
           <template v-slot:item.no="{index}">{{ index + 1 }}.</template>
           <template v-slot:item.image="{item}">
             <v-avatar rounded>
-              <v-img cover :src="item.raw.images?.length!==0?'http://localhost:3001/'+item.raw.images[0]:'/img/nophoto.jpg'"></v-img>
+              <v-img cover :src="item.raw.images?.length!==0?'https://adminpanel-vnps.onrender.com/'+item.raw.images[0]:'/img/nophoto.jpg'"></v-img>
             </v-avatar>
           </template>
           <template v-slot:item.actions="{ item }">
