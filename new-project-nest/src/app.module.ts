@@ -21,7 +21,7 @@ import { databaseurl } from './key'
   imports: [
     SequelizeModule.forRoot({
       dialect: 'postgres',
-      url: databaseurl,
+      uri: databaseurl,
       autoLoadModels: true,
       synchronize: true,
       logging: false
