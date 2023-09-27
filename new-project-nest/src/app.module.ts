@@ -15,17 +15,13 @@ import { OrderModule } from './order/order.module'
 import { ChatModule } from './chat/chat.module'
 import { IoAdapter } from '@nestjs/platform-socket.io'
 import { AppGetWay } from './app.getway'
-import { database, host, password, port, username } from './key'
+import { databaseurl } from './key'
 
 @Module({
   imports: [
     SequelizeModule.forRoot({
       dialect: 'postgres',
-      host,
-      port,
-      username,
-      password,
-      database,
+      url: databaseurl,
       autoLoadModels: true,
       synchronize: true,
       logging: false
