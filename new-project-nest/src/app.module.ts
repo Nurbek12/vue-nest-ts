@@ -34,7 +34,7 @@ import { databaseurl } from './key'
     OrderModule,
     UserModule,
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, 'files'),
+      rootPath: join(__dirname, 'client/dist'),
     }),
   ],
   controllers: [AppController],
