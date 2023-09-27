@@ -7,7 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "nest build",
-    "build:client": "cd client && npm run build && cd ../ && cp ./client/dist ./dist/",
+    "build:client": "cd client && npm i && npm run build && cd ../ && cp ./client/dist ./dist/",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "npm run build:client && nest start",
     "start:dev": "nest start --watch",
